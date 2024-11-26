@@ -79,6 +79,8 @@ app.listen(PORT, () => {
 });
 ```
 
+![Node app running](./screenshots/node-app-running.png)
+
 ### Configurar Nginx como Proxy Inverso
 
 1. Navega a la carpeta sites-available de Nginx.
@@ -130,6 +132,9 @@ sudo systemctl restart nginx
 ```
 
 7. Prueba que tu aplicación de Node.js está funcionando correctamente.
+
+![Nginx status](./screenshots/nginx-local-status.png)
+![Node Running Local](./screenshots/node-app-local-nginx.png)
 
 ### Crear una template de Packer
 
@@ -199,33 +204,45 @@ build {
 }
 ```
 
-3. Configura tus credenciales para poder acceder a tu cuenta de AWS. Para obtener tus credenciales de AWS puedes ir a tu usuario > Security Credentials > Access keys.
+3. Ejecuta el siguiente comando para instalar el plugin de Packer para AWS.
+
+```bash
+packer init .
+```
+![Packer Init](./screenshots/packer-init.png)
+
+4. Configura tus credenciales para poder acceder a tu cuenta de AWS. Para obtener tus credenciales de AWS puedes ir a tu usuario > Security Credentials > Access keys.
 
 ```bash
 export AWS_ACCESS_KEY_ID="<YOUR_AWS_ACCESS_KEY_ID>"
 export AWS_SECRET_ACCESS_KEY="<YOUR_AWS_SECRET_ACCESS_KEY>"
 ``` 
 
-4. Formatea el archivo .pkr.hcl.
+5. Formatea el archivo .pkr.hcl.
 
 ```bash
 packer fmt .
 ```
 
-5. Valida el archivo .pkr.hcl.
+6. Valida el archivo .pkr.hcl.
 
 ```bash
 packer validate .
 ```
+![Packer Validate](./screenshots/packer-validate.png)
 
-6. Ejecuta el comando packer build.
+7. Ejecuta el comando packer build.
 
 ```bash
 packer build .
 ```
-[Log de ejecución](./logs/ec2-aws-cli.log)
+![Packer Build](./screenshots/packer-build.png)
+[Log de ejecucion](./logs/packer-build.log)
 
-7. Comprueba que la imagen se ha creado correctamente en tu cuenta de AWS.
+
+8. Comprueba que la imagen se ha creado correctamente en tu cuenta de AWS.
+
+![AMI Creada](./screenshots/ami-created.png)
 
 ### Prueba del AMI en AWS
 
@@ -254,7 +271,11 @@ Despliegue sin intervención manual. Ahora, debes modificar la imagen y la templ
 ```bash
 aws ec2 run-instances --image-id <AMI_ID> --count 1 --instance-type t2.micro --key-name <KEY_PAIR_NAME> --security-group-ids <SECURITY_GROUP_ID>
 ```
-[Log de ejecucion](./logs/packer-build.log)
+
+![EC2 Console](./screenshots/ec2-aws-cli-full.png)
+![Node App AWS CLI](./screenshots/node-app-aws-cli.png)
+
+[Log de ejecución](./logs/ec2-aws-cli.log)
 
 ---
 
