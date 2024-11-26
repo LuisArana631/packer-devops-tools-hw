@@ -33,13 +33,25 @@ build {
   sources = [
     "source.amazon-ebs.ubuntu"
   ]
-  provisioner = "shell" {
+
+  provisioner "shell" {
     inline = [
       "sudo apt-get update",
       "sudo apt-get install -y nodejs npm nginx",
       "sudo npm install -g n",
       "sudo n stable",
-      "sudo mkdir -p /var/www/html",
+      "sudo mkdir -p /var/www/node_app",
+      "git clone https://github.com/LuisArana631/packer-devops-tools-hw.git /var/www/node_app",
+      "cd /var/www/node_app/nodejs-project/src && sudo npm i",
+      "sudo chown -R ubuntu:ubuntu /var/www/node_app",
+      "echo '[Unit]\nDescription=Node.js App\n[Service]\nExecStart=/usr/bin/node /var/www/node_app/nodejs-project/src/app.js\nRestart=always\nUser=ubuntu\nEnvironment=PORT=3000\n[Install]\nWantedBy=multi-user.target' | sudo tee /etc/systemd/system/nodeapp.service",
+      "sudo systemctl enable nodeapp",
+      "sudo systemctl start nodeapp",
+      "sudo cp /var/www/node_app/nodejs-project/nginx.conf /etc/nginx/sites-available/node_app",
+      "sudo ln -s /etc/nginx/sites-available/node_app /etc/nginx/sites-enabled/",
+      "sudo rm /etc/nginx/sites-enabled/default",
+      "sudo nginx -t",
+      "sudo systemctl restart nginx"
     ]
   }
 }
