@@ -1,0 +1,65 @@
+{
+    "Groups": [],
+    "Instances": [
+        {
+            "AmiLaunchIndex": 0,
+            "ImageId": "ami-05fa518a666b423c8",
+            "InstanceId": "i-0e8c5ebb4bc39f105",
+            "InstanceType": "t2.micro",
+            "KeyName": "fundaments-udemy",
+            "LaunchTime": "2024-11-26T01:31:12+00:00",
+            "Monitoring": {
+{
+    "Groups": [],
+    "Instances": [
+        {
+            "AmiLaunchIndex": 0,
+            "ImageId": "ami-05fa518a666b423c8",
+            "InstanceId": "i-0e8c5ebb4bc39f105",
+            "InstanceType": "t2.micro",
+            "KeyName": "fundaments-udemy",
+            "LaunchTime": "2024-11-26T01:31:12+00:00",
+            "Monitoring": {
+                "State": "disabled"
+            },
+            "Placement": {
+                "AvailabilityZone": "us-east-1a",
+                "GroupName": "",
+                "Tenancy": "default"
+            },
+            "PrivateDnsName": "ip-172-31-95-212.ec2.internal",
+            "PrivateIpAddress": "172.31.95.212",
+            "ProductCodes": [],
+            "PublicDnsName": "",
+            "State": {
+                "Code": 0,
+:...skipping...
+{
+    "Groups": [],
+    "Instances": [
+        {
+            "AmiLaunchIndex": 0,
+            "ImageId": "ami-05fa518a666b423c8",
+            "InstanceId": "i-0e8c5ebb4bc39f105",
+            "InstanceType": "t2.micro",
+            "KeyName": "fundaments-udemy",
+            "LaunchTime": "2024-11-26T01:31:12+00:00",
+            "Monitoring": {
+                "State": "disabled"
+            },
+            "Placement": {
+                "AvailabilityZone": "us-east-1a",
+                "GroupName": "",
+                "Tenancy": "default"
+            },
+            "PrivateDnsName": "ip-172-31-95-212.ec2.internal",
+            "PrivateIpAddress": "172.31.95.212",
+            "ProductCodes": [],
+            "PublicDnsName": "",
+            "State": {
+                "Code": 0,
+                "Name": "pending"
+            },
+            "StateTransitionReason": "",
+            "SubnetId": "subnet-07cc74d93015190c2",
+:

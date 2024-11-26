@@ -25,11 +25,9 @@ Para realizar esta actividad necesitarás los siguientes recursos:
 
   - Una cuenta en AZURE.
 
-  - Una cuenta en Docker Hub.
+  - Un entorno de desarrollo con AWS CLI instalado.
 
   - Un entorno de desarrollo con Packer instalado.
-
-  - Un entorno de desarrollo con Docker instalado.
 
   - Un entorno de desarrollo con Node.js instalado.
 
@@ -37,9 +35,16 @@ Para realizar esta actividad necesitarás los siguientes recursos:
 
   - Un entorno de desarrollo con Git instalado.
 
-  - Un entorno de desarrollo con PM2 instalado.
 
 ## Desarrollo
+
+---
+
+### Ejercicio 1
+
+Creación de una template de Packer. Con el proyecto seleccionado, debes crear una template (plantilla) de Packer que te permita generar una imagen mediante una aplicación con Node.js ya instalada y configurada con Nginx como servidor web. Para desarrollar la plantilla, aplica la información que se recoge en el enlace de apoyo proporcionado con anterioridad. En esta tarea, se tendrá en cuenta el uso de IP pública.
+
+---
 
 ### Crear un repositorio en GitHub
 
@@ -126,7 +131,7 @@ sudo systemctl restart nginx
 
 7. Prueba que tu aplicación de Node.js está funcionando correctamente.
 
-### Crear una template de Packer (EJEMPLO)
+### Crear una template de Packer
 
 1. Copia el archivo nginx.conf en la carpeta de tu proyecto.
 
@@ -142,10 +147,15 @@ packer {
   }
 }
 
+variable "region" {
+  type    = string
+  default = "us-east-1"
+}
+
 source "amazon-ebs" "ubuntu" {
+  region        = var.region
   ami_name      = "devops-tools-nginx-nodejs"
   instance_type = "t2.micro"
-  region        = "us-west-2"
   source_ami_filter {
     filters = {
       name                = "ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*"
@@ -159,10 +169,33 @@ source "amazon-ebs" "ubuntu" {
 }
 
 build {
-  name    = "learn-packer"
+  name = "packer-devops-template"
   sources = [
     "source.amazon-ebs.ubuntu"
   ]
+
+  provisioner "shell" {
+    inline = [
+      "curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -",
+      "sudo apt-get update",
+      "sudo apt-get install -y nodejs nginx",
+      "sudo npm install -g n",
+      "sudo n stable",
+      "sudo mkdir -p /var/www/node_app",
+      "sudo chown -R ubuntu:ubuntu /var/www",
+      "git clone https://github.com/LuisArana631/packer-devops-tools-hw.git /var/www/node_app",
+      "cd /var/www/node_app/nodejs-project/src && sudo npm i",
+      "sudo chown -R ubuntu:ubuntu /var/www/node_app",
+      "echo '[Unit]\nDescription=Node.js App\n[Service]\nExecStart=/usr/bin/node /var/www/node_app/nodejs-project/src/app.js\nRestart=always\nUser=ubuntu\nEnvironment=PORT=3000\n[Install]\nWantedBy=multi-user.target' | sudo tee /etc/systemd/system/nodeapp.service",
+      "sudo systemctl enable nodeapp",
+      "sudo systemctl start nodeapp",
+      "sudo cp /var/www/node_app/nodejs-project/nginx.conf /etc/nginx/sites-available/node_app",
+      "sudo ln -s /etc/nginx/sites-available/node_app /etc/nginx/sites-enabled/",
+      "sudo rm /etc/nginx/sites-enabled/default",
+      "sudo nginx -t",
+      "sudo systemctl restart nginx"
+    ]
+  }
 }
 ```
 
@@ -190,3 +223,46 @@ packer validate .
 ```bash
 packer build .
 ```
+[Log de ejecución](./logs/ec2-aws-cli.log)
+
+7. Comprueba que la imagen se ha creado correctamente en tu cuenta de AWS.
+
+### Prueba del AMI en AWS
+
+1. Crea una instancia en AWS con la imagen que has creado.
+
+    Debes agregar los permisos para poder acceder a las peticiones HTTP
+
+2. Comprueba que la instancia está funcionando correctamente.
+
+3. Accede a la IP pública de la instancia.
+
+4. Comprueba que la aplicación de Node.js está funcionando correctamente.
+
+---
+
+### Ejercicio 2
+
+Despliegue sin intervención manual. Ahora, debes modificar la imagen y la template de la tarea anterior de tal forma que la imagen se cree y el despliegue completo se realice de forma automática, sin intervención manual. Te aconsejamos revisar documentación del proveedor para utilizar el CLI.
+
+---
+
+### Despliege usando AWS CLI
+
+1. Ejecuta el siguiente comando para crear una instancia en AWS.
+
+```bash
+aws ec2 run-instances --image-id <AMI_ID> --count 1 --instance-type t2.micro --key-name <KEY_PAIR_NAME> --security-group-ids <SECURITY_GROUP_ID>
+```
+[Log de ejecucion](./logs/packer-build.log)
+
+---
+
+### Ejercicio 3
+
+Añade un builder de otro tipo para una nube pública (secundario AZURE) en caso de usar otro proveedor y justifica su uso.
+
+---
+
+### Agregar un builder para AZURE
+

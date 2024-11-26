@@ -1,0 +1,347 @@
+packer-devops-template.amazon-ebs.ubuntu: output will be in this color.
+
+==> packer-devops-template.amazon-ebs.ubuntu: Prevalidating any provided VPC information
+==> packer-devops-template.amazon-ebs.ubuntu: Prevalidating AMI Name: devops-tools-nginx-nodejs
+    packer-devops-template.amazon-ebs.ubuntu: Found Image ID: ami-095a8f574cb0ac0d0
+==> packer-devops-template.amazon-ebs.ubuntu: Creating temporary keypair: packer_67451b6c-10c4-a993-e11c-e9df7f590866
+==> packer-devops-template.amazon-ebs.ubuntu: Creating temporary security group for this instance: packer_67451b6e-ba7b-2cc3-e32a-2450400bd20f
+==> packer-devops-template.amazon-ebs.ubuntu: Authorizing access to port 22 from [0.0.0.0/0] in the temporary security groups...
+==> packer-devops-template.amazon-ebs.ubuntu: Launching a source AWS instance...
+    packer-devops-template.amazon-ebs.ubuntu: Instance ID: i-0ee7065da491a5929
+==> packer-devops-template.amazon-ebs.ubuntu: Waiting for instance (i-0ee7065da491a5929) to become ready...
+==> packer-devops-template.amazon-ebs.ubuntu: Using SSH communicator to connect: 18.206.125.219
+==> packer-devops-template.amazon-ebs.ubuntu: Waiting for SSH to become available...
+==> packer-devops-template.amazon-ebs.ubuntu: Connected to SSH!
+==> packer-devops-template.amazon-ebs.ubuntu: Provisioning with shell script: /tmp/packer-shell2044162358
+    packer-devops-template.amazon-ebs.ubuntu:
+    packer-devops-template.amazon-ebs.ubuntu: ================================================================================
+    packer-devops-template.amazon-ebs.ubuntu: ================================================================================
+    packer-devops-template.amazon-ebs.ubuntu:
+    packer-devops-template.amazon-ebs.ubuntu:                               DEPRECATION WARNING
+    packer-devops-template.amazon-ebs.ubuntu:
+    packer-devops-template.amazon-ebs.ubuntu:   Node.js 14.x is no longer actively supported!
+    packer-devops-template.amazon-ebs.ubuntu:
+    packer-devops-template.amazon-ebs.ubuntu:   You will not receive security or critical stability updates for this version.
+    packer-devops-template.amazon-ebs.ubuntu:
+    packer-devops-template.amazon-ebs.ubuntu:   You should migrate to a supported version of Node.js as soon as possible.
+    packer-devops-template.amazon-ebs.ubuntu:   Use the installation script that corresponds to the version of Node.js you
+    packer-devops-template.amazon-ebs.ubuntu:   wish to install. e.g.
+    packer-devops-template.amazon-ebs.ubuntu:
+    packer-devops-template.amazon-ebs.ubuntu:    * https://deb.nodesource.com/setup_16.x — Node.js 16 "Gallium"
+    packer-devops-template.amazon-ebs.ubuntu:    * https://deb.nodesource.com/setup_18.x — Node.js 18 LTS "Hydrogen" (recommended)
+    packer-devops-template.amazon-ebs.ubuntu:    * https://deb.nodesource.com/setup_19.x — Node.js 19 "Nineteen"
+    packer-devops-template.amazon-ebs.ubuntu:    * https://deb.nodesource.com/setup_20.x — Node.js 20 "Iron" (current)
+    packer-devops-template.amazon-ebs.ubuntu:
+    packer-devops-template.amazon-ebs.ubuntu:   Please see https://github.com/nodejs/Release for details about which
+    packer-devops-template.amazon-ebs.ubuntu:   version may be appropriate for you.
+    packer-devops-template.amazon-ebs.ubuntu:
+    packer-devops-template.amazon-ebs.ubuntu:   The NodeSource Node.js distributions repository contains
+    packer-devops-template.amazon-ebs.ubuntu:   information both about supported versions of Node.js and supported Linux
+    packer-devops-template.amazon-ebs.ubuntu:   distributions. To learn more about usage, see the repository:
+    packer-devops-template.amazon-ebs.ubuntu:     https://github.com/nodesource/distributions
+    packer-devops-template.amazon-ebs.ubuntu:
+    packer-devops-template.amazon-ebs.ubuntu: ================================================================================
+    packer-devops-template.amazon-ebs.ubuntu: ================================================================================
+    packer-devops-template.amazon-ebs.ubuntu:
+    packer-devops-template.amazon-ebs.ubuntu: Continuing in 20 seconds ...
+    packer-devops-template.amazon-ebs.ubuntu:
+    packer-devops-template.amazon-ebs.ubuntu:
+    packer-devops-template.amazon-ebs.ubuntu: ================================================================================
+    packer-devops-template.amazon-ebs.ubuntu: ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
+    packer-devops-template.amazon-ebs.ubuntu: ================================================================================
+    packer-devops-template.amazon-ebs.ubuntu:
+    packer-devops-template.amazon-ebs.ubuntu:                            SCRIPT DEPRECATION WARNING
+    packer-devops-template.amazon-ebs.ubuntu:
+    packer-devops-template.amazon-ebs.ubuntu:
+    packer-devops-template.amazon-ebs.ubuntu:   This script, located at https://deb.nodesource.com/setup_X, used to
+    packer-devops-template.amazon-ebs.ubuntu:   install Node.js is deprecated now and will eventually be made inactive.
+    packer-devops-template.amazon-ebs.ubuntu:
+    packer-devops-template.amazon-ebs.ubuntu:   Please visit the NodeSource distributions Github and follow the
+    packer-devops-template.amazon-ebs.ubuntu:   instructions to migrate your repo.
+    packer-devops-template.amazon-ebs.ubuntu:   https://github.com/nodesource/distributions
+    packer-devops-template.amazon-ebs.ubuntu:
+    packer-devops-template.amazon-ebs.ubuntu:   The NodeSource Node.js Linux distributions GitHub repository contains
+    packer-devops-template.amazon-ebs.ubuntu:   information about which versions of Node.js and which Linux distributions
+    packer-devops-template.amazon-ebs.ubuntu:   are supported and how to install it.
+    packer-devops-template.amazon-ebs.ubuntu:   https://github.com/nodesource/distributions
+    packer-devops-template.amazon-ebs.ubuntu:
+    packer-devops-template.amazon-ebs.ubuntu:
+    packer-devops-template.amazon-ebs.ubuntu:                           SCRIPT DEPRECATION WARNING
+    packer-devops-template.amazon-ebs.ubuntu:
+    packer-devops-template.amazon-ebs.ubuntu: ================================================================================
+    packer-devops-template.amazon-ebs.ubuntu: ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
+    packer-devops-template.amazon-ebs.ubuntu: ================================================================================
+    packer-devops-template.amazon-ebs.ubuntu:
+    packer-devops-template.amazon-ebs.ubuntu: TO AVOID THIS WAIT MIGRATE THE SCRIPT
+    packer-devops-template.amazon-ebs.ubuntu: Continuing in 60 seconds (press Ctrl-C to abort) ...
+    packer-devops-template.amazon-ebs.ubuntu:
+    packer-devops-template.amazon-ebs.ubuntu:
+    packer-devops-template.amazon-ebs.ubuntu: ## Installing the NodeSource Node.js 14.x repo...
+    packer-devops-template.amazon-ebs.ubuntu:
+    packer-devops-template.amazon-ebs.ubuntu:
+    packer-devops-template.amazon-ebs.ubuntu: ## Populating apt-get cache...
+    packer-devops-template.amazon-ebs.ubuntu:
+    packer-devops-template.amazon-ebs.ubuntu: + apt-get update
+    packer-devops-template.amazon-ebs.ubuntu: Hit:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal InRelease
+    packer-devops-template.amazon-ebs.ubuntu: Get:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates InRelease [128 kB]
+    packer-devops-template.amazon-ebs.ubuntu: Get:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-backports InRelease [128 kB]
+    packer-devops-template.amazon-ebs.ubuntu: Get:4 http://security.ubuntu.com/ubuntu focal-security InRelease [128 kB]
+    packer-devops-template.amazon-ebs.ubuntu: Get:5 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/universe amd64 Packages [8628 kB]
+    packer-devops-template.amazon-ebs.ubuntu: Get:6 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/universe Translation-en [5124 kB]
+    packer-devops-template.amazon-ebs.ubuntu: Get:7 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/universe amd64 c-n-f Metadata [265 kB]
+    packer-devops-template.amazon-ebs.ubuntu: Get:8 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/multiverse amd64 Packages [144 kB]
+    packer-devops-template.amazon-ebs.ubuntu: Get:9 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/multiverse Translation-en [104 kB]
+    packer-devops-template.amazon-ebs.ubuntu: Get:10 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/multiverse amd64 c-n-f Metadata [9136 B]
+    packer-devops-template.amazon-ebs.ubuntu: Get:11 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [3678 kB]
+    packer-devops-template.amazon-ebs.ubuntu: Get:12 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main Translation-en [563 kB]
+    packer-devops-template.amazon-ebs.ubuntu: Get:13 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/restricted amd64 Packages [3379 kB]
+    packer-devops-template.amazon-ebs.ubuntu: Get:14 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/restricted Translation-en [473 kB]
+    packer-devops-template.amazon-ebs.ubuntu: Get:15 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [1239 kB]
+    packer-devops-template.amazon-ebs.ubuntu: Get:16 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/universe Translation-en [298 kB]
+    packer-devops-template.amazon-ebs.ubuntu: Get:17 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/universe amd64 c-n-f Metadata [28.3 kB]
+    packer-devops-template.amazon-ebs.ubuntu: Get:18 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 Packages [27.0 kB]
+    packer-devops-template.amazon-ebs.ubuntu: Get:19 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/multiverse Translation-en [7936 B]
+    packer-devops-template.amazon-ebs.ubuntu: Get:20 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 c-n-f Metadata [612 B]
+    packer-devops-template.amazon-ebs.ubuntu: Get:21 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-backports/main amd64 Packages [45.7 kB]
+    packer-devops-template.amazon-ebs.ubuntu: Get:22 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-backports/main Translation-en [16.3 kB]
+    packer-devops-template.amazon-ebs.ubuntu: Get:23 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-backports/main amd64 c-n-f Metadata [1420 B]
+    packer-devops-template.amazon-ebs.ubuntu: Get:24 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-backports/restricted amd64 c-n-f Metadata [116 B]
+    packer-devops-template.amazon-ebs.ubuntu: Get:25 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-backports/universe amd64 Packages [25.0 kB]
+    packer-devops-template.amazon-ebs.ubuntu: Get:26 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-backports/universe Translation-en [16.3 kB]
+    packer-devops-template.amazon-ebs.ubuntu: Get:27 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-backports/universe amd64 c-n-f Metadata [880 B]
+    packer-devops-template.amazon-ebs.ubuntu: Get:28 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-backports/multiverse amd64 c-n-f Metadata [116 B]
+    packer-devops-template.amazon-ebs.ubuntu: Get:29 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [3303 kB]
+    packer-devops-template.amazon-ebs.ubuntu: Get:30 http://security.ubuntu.com/ubuntu focal-security/main Translation-en [484 kB]
+    packer-devops-template.amazon-ebs.ubuntu: Get:31 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [1016 kB]
+    packer-devops-template.amazon-ebs.ubuntu: Get:32 http://security.ubuntu.com/ubuntu focal-security/universe Translation-en [214 kB]
+    packer-devops-template.amazon-ebs.ubuntu: Get:33 http://security.ubuntu.com/ubuntu focal-security/universe amd64 c-n-f Metadata [21.4 kB]
+    packer-devops-template.amazon-ebs.ubuntu: Get:34 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 Packages [24.8 kB]
+    packer-devops-template.amazon-ebs.ubuntu: Get:35 http://security.ubuntu.com/ubuntu focal-security/multiverse Translation-en [5968 B]
+    packer-devops-template.amazon-ebs.ubuntu: Get:36 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 c-n-f Metadata [540 B]
+    packer-devops-template.amazon-ebs.ubuntu: Fetched 29.5 MB in 7s (4309 kB/s)
+    packer-devops-template.amazon-ebs.ubuntu: Reading package lists...
+    packer-devops-template.amazon-ebs.ubuntu:
+    packer-devops-template.amazon-ebs.ubuntu: ## Confirming "focal" is supported...
+    packer-devops-template.amazon-ebs.ubuntu:
+    packer-devops-template.amazon-ebs.ubuntu: + curl -sLf -o /dev/null 'https://deb.nodesource.com/node_14.x/dists/focal/Release'
+    packer-devops-template.amazon-ebs.ubuntu:
+    packer-devops-template.amazon-ebs.ubuntu: ## Adding the NodeSource signing key to your keyring...
+    packer-devops-template.amazon-ebs.ubuntu:
+    packer-devops-template.amazon-ebs.ubuntu: + curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | gpg --dearmor | tee /usr/share/keyrings/nodesource.gpg >/dev/null
+    packer-devops-template.amazon-ebs.ubuntu:
+    packer-devops-template.amazon-ebs.ubuntu: ## Creating apt sources list file for the NodeSource Node.js 14.x repo...
+    packer-devops-template.amazon-ebs.ubuntu:
+    packer-devops-template.amazon-ebs.ubuntu: + echo 'deb [signed-by=/usr/share/keyrings/nodesource.gpg] https://deb.nodesource.com/node_14.x focal main' > /etc/apt/sources.list.d/nodesource.list
+    packer-devops-template.amazon-ebs.ubuntu: + echo 'deb-src [signed-by=/usr/share/keyrings/nodesource.gpg] https://deb.nodesource.com/node_14.x focal main' >> /etc/apt/sources.list.d/nodesource.list
+    packer-devops-template.amazon-ebs.ubuntu:
+    packer-devops-template.amazon-ebs.ubuntu: ## Running `apt-get update` for you...
+    packer-devops-template.amazon-ebs.ubuntu:
+    packer-devops-template.amazon-ebs.ubuntu: + apt-get update
+    packer-devops-template.amazon-ebs.ubuntu: Hit:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal InRelease
+    packer-devops-template.amazon-ebs.ubuntu: Hit:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates InRelease
+    packer-devops-template.amazon-ebs.ubuntu: Hit:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-backports InRelease
+    packer-devops-template.amazon-ebs.ubuntu: Get:4 https://deb.nodesource.com/node_14.x focal InRelease [4583 B]
+    packer-devops-template.amazon-ebs.ubuntu: Hit:5 http://security.ubuntu.com/ubuntu focal-security InRelease
+    packer-devops-template.amazon-ebs.ubuntu: Get:6 https://deb.nodesource.com/node_14.x focal/main amd64 Packages [776 B]
+    packer-devops-template.amazon-ebs.ubuntu: Fetched 5359 B in 1s (7056 B/s)
+    packer-devops-template.amazon-ebs.ubuntu: Reading package lists...
+    packer-devops-template.amazon-ebs.ubuntu:
+    packer-devops-template.amazon-ebs.ubuntu: ## Run `sudo apt-get install -y nodejs` to install Node.js 14.x and npm
+    packer-devops-template.amazon-ebs.ubuntu: ## You may also need development tools to build native addons:
+    packer-devops-template.amazon-ebs.ubuntu:      sudo apt-get install gcc g++ make
+    packer-devops-template.amazon-ebs.ubuntu: ## To install the Yarn package manager, run:
+    packer-devops-template.amazon-ebs.ubuntu:      curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | gpg --dearmor | sudo tee /usr/share/keyrings/yarnkey.gpg >/dev/null
+    packer-devops-template.amazon-ebs.ubuntu:      echo "deb [signed-by=/usr/share/keyrings/yarnkey.gpg] https://dl.yarnpkg.com/debian stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+    packer-devops-template.amazon-ebs.ubuntu:      sudo apt-get update && sudo apt-get install yarn
+    packer-devops-template.amazon-ebs.ubuntu:
+    packer-devops-template.amazon-ebs.ubuntu:
+    packer-devops-template.amazon-ebs.ubuntu: Hit:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal InRelease
+    packer-devops-template.amazon-ebs.ubuntu: Hit:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates InRelease
+    packer-devops-template.amazon-ebs.ubuntu: Hit:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-backports InRelease
+    packer-devops-template.amazon-ebs.ubuntu: Hit:4 https://deb.nodesource.com/node_14.x focal InRelease
+    packer-devops-template.amazon-ebs.ubuntu: Hit:5 http://security.ubuntu.com/ubuntu focal-security InRelease
+    packer-devops-template.amazon-ebs.ubuntu: Reading package lists...
+    packer-devops-template.amazon-ebs.ubuntu: Reading package lists...
+    packer-devops-template.amazon-ebs.ubuntu: Building dependency tree...
+    packer-devops-template.amazon-ebs.ubuntu: Reading state information...
+    packer-devops-template.amazon-ebs.ubuntu: The following additional packages will be installed:
+    packer-devops-template.amazon-ebs.ubuntu:   fontconfig-config fonts-dejavu-core libfontconfig1 libgd3 libjbig0
+    packer-devops-template.amazon-ebs.ubuntu:   libjpeg-turbo8 libjpeg8 libnginx-mod-http-image-filter
+    packer-devops-template.amazon-ebs.ubuntu:   libnginx-mod-http-xslt-filter libnginx-mod-mail libnginx-mod-stream libtiff5
+    packer-devops-template.amazon-ebs.ubuntu:   libwebp6 libxpm4 nginx-common nginx-core
+    packer-devops-template.amazon-ebs.ubuntu: Suggested packages:
+    packer-devops-template.amazon-ebs.ubuntu:   libgd-tools fcgiwrap nginx-doc ssl-cert
+    packer-devops-template.amazon-ebs.ubuntu: The following NEW packages will be installed:
+    packer-devops-template.amazon-ebs.ubuntu:   fontconfig-config fonts-dejavu-core libfontconfig1 libgd3 libjbig0
+    packer-devops-template.amazon-ebs.ubuntu:   libjpeg-turbo8 libjpeg8 libnginx-mod-http-image-filter
+    packer-devops-template.amazon-ebs.ubuntu:   libnginx-mod-http-xslt-filter libnginx-mod-mail libnginx-mod-stream libtiff5
+    packer-devops-template.amazon-ebs.ubuntu:   libwebp6 libxpm4 nginx nginx-common nginx-core nodejs
+    packer-devops-template.amazon-ebs.ubuntu: 0 upgraded, 18 newly installed, 0 to remove and 13 not upgraded.
+    packer-devops-template.amazon-ebs.ubuntu: Need to get 27.9 MB of archives.
+    packer-devops-template.amazon-ebs.ubuntu: After this operation, 129 MB of additional disk space will be used.
+    packer-devops-template.amazon-ebs.ubuntu: Get:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 fonts-dejavu-core all 2.37-1 [1041 kB]
+    packer-devops-template.amazon-ebs.ubuntu: Get:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 fontconfig-config all 2.13.1-2ubuntu3 [28.8 kB]
+    packer-devops-template.amazon-ebs.ubuntu: Get:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 libfontconfig1 amd64 2.13.1-2ubuntu3 [114 kB]
+    packer-devops-template.amazon-ebs.ubuntu: Get:4 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libjpeg-turbo8 amd64 2.0.3-0ubuntu1.20.04.3 [118 kB]
+    packer-devops-template.amazon-ebs.ubuntu: Get:5 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 libjpeg8 amd64 8c-2ubuntu8 [2194 B]
+    packer-devops-template.amazon-ebs.ubuntu: Get:6 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libjbig0 amd64 2.1-3.1ubuntu0.20.04.1 [27.3 kB]
+    packer-devops-template.amazon-ebs.ubuntu: Get:7 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libwebp6 amd64 0.6.1-2ubuntu0.20.04.3 [185 kB]
+    packer-devops-template.amazon-ebs.ubuntu: Get:8 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libtiff5 amd64 4.1.0+git191117-2ubuntu0.20.04.14 [164 kB]
+    packer-devops-template.amazon-ebs.ubuntu: Get:9 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libxpm4 amd64 1:3.5.12-1ubuntu0.20.04.2 [34.9 kB]
+    packer-devops-template.amazon-ebs.ubuntu: Get:10 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libgd3 amd64 2.2.5-5.2ubuntu2.4 [118 kB]
+    packer-devops-template.amazon-ebs.ubuntu: Get:11 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 nginx-common all 1.18.0-0ubuntu1.6 [37.7 kB]
+    packer-devops-template.amazon-ebs.ubuntu: Get:12 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libnginx-mod-http-image-filter amd64 1.18.0-0ubuntu1.6 [14.8 kB]
+    packer-devops-template.amazon-ebs.ubuntu: Get:13 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libnginx-mod-http-xslt-filter amd64 1.18.0-0ubuntu1.6 [13.0 kB]
+    packer-devops-template.amazon-ebs.ubuntu: Get:14 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libnginx-mod-mail amd64 1.18.0-0ubuntu1.6 [42.8 kB]
+    packer-devops-template.amazon-ebs.ubuntu: Get:15 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libnginx-mod-stream amd64 1.18.0-0ubuntu1.6 [67.2 kB]
+    packer-devops-template.amazon-ebs.ubuntu: Get:16 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 nginx-core amd64 1.18.0-0ubuntu1.6 [425 kB]
+    packer-devops-template.amazon-ebs.ubuntu: Get:17 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 nginx all 1.18.0-0ubuntu1.6 [3616 B]
+    packer-devops-template.amazon-ebs.ubuntu: Get:18 https://deb.nodesource.com/node_14.x focal/main amd64 nodejs amd64 14.21.3-deb-1nodesource1 [25.4 MB]
+==> packer-devops-template.amazon-ebs.ubuntu: debconf: unable to initialize frontend: Dialog
+==> packer-devops-template.amazon-ebs.ubuntu: debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+==> packer-devops-template.amazon-ebs.ubuntu: debconf: falling back to frontend: Readline
+==> packer-devops-template.amazon-ebs.ubuntu: debconf: unable to initialize frontend: Readline
+==> packer-devops-template.amazon-ebs.ubuntu: debconf: (This frontend requires a controlling tty.)
+==> packer-devops-template.amazon-ebs.ubuntu: debconf: falling back to frontend: Teletype
+==> packer-devops-template.amazon-ebs.ubuntu: dpkg-preconfigure: unable to re-open stdin:
+    packer-devops-template.amazon-ebs.ubuntu: Fetched 27.9 MB in 1s (42.6 MB/s)
+    packer-devops-template.amazon-ebs.ubuntu: Selecting previously unselected package fonts-dejavu-core.
+    packer-devops-template.amazon-ebs.ubuntu: (Reading database ... 62161 files and directories currently installed.)
+    packer-devops-template.amazon-ebs.ubuntu: Preparing to unpack .../00-fonts-dejavu-core_2.37-1_all.deb ...
+    packer-devops-template.amazon-ebs.ubuntu: Unpacking fonts-dejavu-core (2.37-1) ...
+    packer-devops-template.amazon-ebs.ubuntu: Selecting previously unselected package fontconfig-config.
+    packer-devops-template.amazon-ebs.ubuntu: Preparing to unpack .../01-fontconfig-config_2.13.1-2ubuntu3_all.deb ...
+    packer-devops-template.amazon-ebs.ubuntu: Unpacking fontconfig-config (2.13.1-2ubuntu3) ...
+    packer-devops-template.amazon-ebs.ubuntu: Selecting previously unselected package libfontconfig1:amd64.
+    packer-devops-template.amazon-ebs.ubuntu: Preparing to unpack .../02-libfontconfig1_2.13.1-2ubuntu3_amd64.deb ...
+    packer-devops-template.amazon-ebs.ubuntu: Unpacking libfontconfig1:amd64 (2.13.1-2ubuntu3) ...
+    packer-devops-template.amazon-ebs.ubuntu: Selecting previously unselected package libjpeg-turbo8:amd64.
+    packer-devops-template.amazon-ebs.ubuntu: Preparing to unpack .../03-libjpeg-turbo8_2.0.3-0ubuntu1.20.04.3_amd64.deb ...
+    packer-devops-template.amazon-ebs.ubuntu: Unpacking libjpeg-turbo8:amd64 (2.0.3-0ubuntu1.20.04.3) ...
+    packer-devops-template.amazon-ebs.ubuntu: Selecting previously unselected package libjpeg8:amd64.
+    packer-devops-template.amazon-ebs.ubuntu: Preparing to unpack .../04-libjpeg8_8c-2ubuntu8_amd64.deb ...
+    packer-devops-template.amazon-ebs.ubuntu: Unpacking libjpeg8:amd64 (8c-2ubuntu8) ...
+    packer-devops-template.amazon-ebs.ubuntu: Selecting previously unselected package libjbig0:amd64.
+    packer-devops-template.amazon-ebs.ubuntu: Preparing to unpack .../05-libjbig0_2.1-3.1ubuntu0.20.04.1_amd64.deb ...
+    packer-devops-template.amazon-ebs.ubuntu: Unpacking libjbig0:amd64 (2.1-3.1ubuntu0.20.04.1) ...
+    packer-devops-template.amazon-ebs.ubuntu: Selecting previously unselected package libwebp6:amd64.
+    packer-devops-template.amazon-ebs.ubuntu: Preparing to unpack .../06-libwebp6_0.6.1-2ubuntu0.20.04.3_amd64.deb ...
+    packer-devops-template.amazon-ebs.ubuntu: Unpacking libwebp6:amd64 (0.6.1-2ubuntu0.20.04.3) ...
+    packer-devops-template.amazon-ebs.ubuntu: Selecting previously unselected package libtiff5:amd64.
+    packer-devops-template.amazon-ebs.ubuntu: Preparing to unpack .../07-libtiff5_4.1.0+git191117-2ubuntu0.20.04.14_amd64.deb ...
+    packer-devops-template.amazon-ebs.ubuntu: Unpacking libtiff5:amd64 (4.1.0+git191117-2ubuntu0.20.04.14) ...
+    packer-devops-template.amazon-ebs.ubuntu: Selecting previously unselected package libxpm4:amd64.
+    packer-devops-template.amazon-ebs.ubuntu: Preparing to unpack .../08-libxpm4_1%3a3.5.12-1ubuntu0.20.04.2_amd64.deb ...
+    packer-devops-template.amazon-ebs.ubuntu: Unpacking libxpm4:amd64 (1:3.5.12-1ubuntu0.20.04.2) ...
+    packer-devops-template.amazon-ebs.ubuntu: Selecting previously unselected package libgd3:amd64.
+    packer-devops-template.amazon-ebs.ubuntu: Preparing to unpack .../09-libgd3_2.2.5-5.2ubuntu2.4_amd64.deb ...
+    packer-devops-template.amazon-ebs.ubuntu: Unpacking libgd3:amd64 (2.2.5-5.2ubuntu2.4) ...
+    packer-devops-template.amazon-ebs.ubuntu: Selecting previously unselected package nginx-common.
+    packer-devops-template.amazon-ebs.ubuntu: Preparing to unpack .../10-nginx-common_1.18.0-0ubuntu1.6_all.deb ...
+    packer-devops-template.amazon-ebs.ubuntu: Unpacking nginx-common (1.18.0-0ubuntu1.6) ...
+    packer-devops-template.amazon-ebs.ubuntu: Selecting previously unselected package libnginx-mod-http-image-filter.
+    packer-devops-template.amazon-ebs.ubuntu: Preparing to unpack .../11-libnginx-mod-http-image-filter_1.18.0-0ubuntu1.6_amd64.deb ...
+    packer-devops-template.amazon-ebs.ubuntu: Unpacking libnginx-mod-http-image-filter (1.18.0-0ubuntu1.6) ...
+    packer-devops-template.amazon-ebs.ubuntu: Selecting previously unselected package libnginx-mod-http-xslt-filter.
+    packer-devops-template.amazon-ebs.ubuntu: Preparing to unpack .../12-libnginx-mod-http-xslt-filter_1.18.0-0ubuntu1.6_amd64.deb ...
+    packer-devops-template.amazon-ebs.ubuntu: Unpacking libnginx-mod-http-xslt-filter (1.18.0-0ubuntu1.6) ...
+    packer-devops-template.amazon-ebs.ubuntu: Selecting previously unselected package libnginx-mod-mail.
+    packer-devops-template.amazon-ebs.ubuntu: Preparing to unpack .../13-libnginx-mod-mail_1.18.0-0ubuntu1.6_amd64.deb ...
+    packer-devops-template.amazon-ebs.ubuntu: Unpacking libnginx-mod-mail (1.18.0-0ubuntu1.6) ...
+    packer-devops-template.amazon-ebs.ubuntu: Selecting previously unselected package libnginx-mod-stream.
+    packer-devops-template.amazon-ebs.ubuntu: Preparing to unpack .../14-libnginx-mod-stream_1.18.0-0ubuntu1.6_amd64.deb ...
+    packer-devops-template.amazon-ebs.ubuntu: Unpacking libnginx-mod-stream (1.18.0-0ubuntu1.6) ...
+    packer-devops-template.amazon-ebs.ubuntu: Selecting previously unselected package nginx-core.
+    packer-devops-template.amazon-ebs.ubuntu: Preparing to unpack .../15-nginx-core_1.18.0-0ubuntu1.6_amd64.deb ...
+    packer-devops-template.amazon-ebs.ubuntu: Unpacking nginx-core (1.18.0-0ubuntu1.6) ...
+    packer-devops-template.amazon-ebs.ubuntu: Selecting previously unselected package nginx.
+    packer-devops-template.amazon-ebs.ubuntu: Preparing to unpack .../16-nginx_1.18.0-0ubuntu1.6_all.deb ...
+    packer-devops-template.amazon-ebs.ubuntu: Unpacking nginx (1.18.0-0ubuntu1.6) ...
+    packer-devops-template.amazon-ebs.ubuntu: Selecting previously unselected package nodejs.
+    packer-devops-template.amazon-ebs.ubuntu: Preparing to unpack .../17-nodejs_14.21.3-deb-1nodesource1_amd64.deb ...
+    packer-devops-template.amazon-ebs.ubuntu: Unpacking nodejs (14.21.3-deb-1nodesource1) ...
+    packer-devops-template.amazon-ebs.ubuntu: Setting up libxpm4:amd64 (1:3.5.12-1ubuntu0.20.04.2) ...
+    packer-devops-template.amazon-ebs.ubuntu: Setting up nginx-common (1.18.0-0ubuntu1.6) ...
+    packer-devops-template.amazon-ebs.ubuntu: debconf: unable to initialize frontend: Dialog
+    packer-devops-template.amazon-ebs.ubuntu: debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+    packer-devops-template.amazon-ebs.ubuntu: debconf: falling back to frontend: Readline
+    packer-devops-template.amazon-ebs.ubuntu: Created symlink /etc/systemd/system/multi-user.target.wants/nginx.service → /lib/systemd/system/nginx.service.
+    packer-devops-template.amazon-ebs.ubuntu: Setting up nodejs (14.21.3-deb-1nodesource1) ...
+    packer-devops-template.amazon-ebs.ubuntu: Setting up libjbig0:amd64 (2.1-3.1ubuntu0.20.04.1) ...
+    packer-devops-template.amazon-ebs.ubuntu: Setting up libnginx-mod-http-xslt-filter (1.18.0-0ubuntu1.6) ...
+    packer-devops-template.amazon-ebs.ubuntu: Setting up libwebp6:amd64 (0.6.1-2ubuntu0.20.04.3) ...
+    packer-devops-template.amazon-ebs.ubuntu: Setting up fonts-dejavu-core (2.37-1) ...
+    packer-devops-template.amazon-ebs.ubuntu: Setting up libjpeg-turbo8:amd64 (2.0.3-0ubuntu1.20.04.3) ...
+    packer-devops-template.amazon-ebs.ubuntu: Setting up libjpeg8:amd64 (8c-2ubuntu8) ...
+    packer-devops-template.amazon-ebs.ubuntu: Setting up libnginx-mod-mail (1.18.0-0ubuntu1.6) ...
+    packer-devops-template.amazon-ebs.ubuntu: Setting up fontconfig-config (2.13.1-2ubuntu3) ...
+    packer-devops-template.amazon-ebs.ubuntu: Setting up libnginx-mod-stream (1.18.0-0ubuntu1.6) ...
+    packer-devops-template.amazon-ebs.ubuntu: Setting up libtiff5:amd64 (4.1.0+git191117-2ubuntu0.20.04.14) ...
+    packer-devops-template.amazon-ebs.ubuntu: Setting up libfontconfig1:amd64 (2.13.1-2ubuntu3) ...
+    packer-devops-template.amazon-ebs.ubuntu: Setting up libgd3:amd64 (2.2.5-5.2ubuntu2.4) ...
+    packer-devops-template.amazon-ebs.ubuntu: Setting up libnginx-mod-http-image-filter (1.18.0-0ubuntu1.6) ...
+    packer-devops-template.amazon-ebs.ubuntu: Setting up nginx-core (1.18.0-0ubuntu1.6) ...
+    packer-devops-template.amazon-ebs.ubuntu: Setting up nginx (1.18.0-0ubuntu1.6) ...
+    packer-devops-template.amazon-ebs.ubuntu: Processing triggers for ufw (0.36-6ubuntu1.1) ...
+    packer-devops-template.amazon-ebs.ubuntu: Processing triggers for systemd (245.4-4ubuntu3.24) ...
+    packer-devops-template.amazon-ebs.ubuntu: Processing triggers for man-db (2.9.1-1) ...
+    packer-devops-template.amazon-ebs.ubuntu: Processing triggers for libc-bin (2.31-0ubuntu9.16) ...
+    packer-devops-template.amazon-ebs.ubuntu: /usr/bin/n -> /usr/lib/node_modules/n/bin/n
+    packer-devops-template.amazon-ebs.ubuntu: + n@10.1.0
+    packer-devops-template.amazon-ebs.ubuntu: added 1 package from 2 contributors in 0.37s
+    packer-devops-template.amazon-ebs.ubuntu:   installing : node-v22.11.0
+    packer-devops-template.amazon-ebs.ubuntu:        mkdir : /usr/local/n/versions/node/22.11.0
+    packer-devops-template.amazon-ebs.ubuntu:        fetch : https://nodejs.org/dist/v22.11.0/node-v22.11.0-linux-x64.tar.xz
+    packer-devops-template.amazon-ebs.ubuntu:      copying : node/22.11.0
+    packer-devops-template.amazon-ebs.ubuntu:    installed : v22.11.0 (with npm 10.9.0)
+    packer-devops-template.amazon-ebs.ubuntu:
+    packer-devops-template.amazon-ebs.ubuntu: Note: the node command changed location and the old location may be remembered in your current shell.
+    packer-devops-template.amazon-ebs.ubuntu:          old : /usr/bin/node
+    packer-devops-template.amazon-ebs.ubuntu:          new : /usr/local/bin/node
+    packer-devops-template.amazon-ebs.ubuntu: If "node --version" shows the old version then start a new shell, or reset the location hash with:
+    packer-devops-template.amazon-ebs.ubuntu: hash -r  (for bash, zsh, ash, dash, and ksh)
+    packer-devops-template.amazon-ebs.ubuntu: rehash   (for csh and tcsh)
+==> packer-devops-template.amazon-ebs.ubuntu: Cloning into '/var/www/node_app'...
+==> packer-devops-template.amazon-ebs.ubuntu: npm notice
+    packer-devops-template.amazon-ebs.ubuntu:
+==> packer-devops-template.amazon-ebs.ubuntu: npm notice New patch version of npm available! 10.9.0 -> 10.9.1
+    packer-devops-template.amazon-ebs.ubuntu: added 65 packages, and audited 66 packages in 2s
+    packer-devops-template.amazon-ebs.ubuntu:
+    packer-devops-template.amazon-ebs.ubuntu: 13 packages are looking for funding
+    packer-devops-template.amazon-ebs.ubuntu:   run `npm fund` for details
+==> packer-devops-template.amazon-ebs.ubuntu: npm notice Changelog: https://github.com/npm/cli/releases/tag/v10.9.1
+    packer-devops-template.amazon-ebs.ubuntu:
+    packer-devops-template.amazon-ebs.ubuntu: found 0 vulnerabilities
+==> packer-devops-template.amazon-ebs.ubuntu: npm notice To update run: npm install -g npm@10.9.1
+    packer-devops-template.amazon-ebs.ubuntu: [Unit]
+==> packer-devops-template.amazon-ebs.ubuntu: npm notice
+    packer-devops-template.amazon-ebs.ubuntu: Description=Node.js App
+    packer-devops-template.amazon-ebs.ubuntu: [Service]
+    packer-devops-template.amazon-ebs.ubuntu: ExecStart=/usr/bin/node /var/www/node_app/nodejs-project/src/app.js
+    packer-devops-template.amazon-ebs.ubuntu: Restart=always
+    packer-devops-template.amazon-ebs.ubuntu: User=ubuntu
+    packer-devops-template.amazon-ebs.ubuntu: Environment=PORT=3000
+    packer-devops-template.amazon-ebs.ubuntu: [Install]
+    packer-devops-template.amazon-ebs.ubuntu: WantedBy=multi-user.target
+==> packer-devops-template.amazon-ebs.ubuntu: Created symlink /etc/systemd/system/multi-user.target.wants/nodeapp.service → /etc/systemd/system/nodeapp.service.
+==> packer-devops-template.amazon-ebs.ubuntu: nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+==> packer-devops-template.amazon-ebs.ubuntu: nginx: configuration file /etc/nginx/nginx.conf test is successful
+==> packer-devops-template.amazon-ebs.ubuntu: Stopping the source instance...
+    packer-devops-template.amazon-ebs.ubuntu: Stopping instance
+==> packer-devops-template.amazon-ebs.ubuntu: Waiting for the instance to stop...
+==> packer-devops-template.amazon-ebs.ubuntu: Creating AMI devops-tools-nginx-nodejs from instance i-0ee7065da491a5929
+    packer-devops-template.amazon-ebs.ubuntu: AMI: ami-05fa518a666b423c8
+==> packer-devops-template.amazon-ebs.ubuntu: Waiting for AMI to become ready...
+==> packer-devops-template.amazon-ebs.ubuntu: Skipping Enable AMI deprecation...
+==> packer-devops-template.amazon-ebs.ubuntu: Terminating the source AWS instance...
+==> packer-devops-template.amazon-ebs.ubuntu: Cleaning up any extra volumes...
+==> packer-devops-template.amazon-ebs.ubuntu: No volumes to clean up, skipping
+==> packer-devops-template.amazon-ebs.ubuntu: Deleting temporary security group...
+==> packer-devops-template.amazon-ebs.ubuntu: Deleting temporary keypair...
+Build 'packer-devops-template.amazon-ebs.ubuntu' finished after 6 minutes 53 seconds.
+
+==> Wait completed after 6 minutes 53 seconds
+
+==> Builds finished. The artifacts of successful builds are:
+--> packer-devops-template.amazon-ebs.ubuntu: AMIs were created:
+us-east-1: ami-05fa518a666b423c8
