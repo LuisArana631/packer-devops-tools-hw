@@ -36,11 +36,13 @@ build {
 
   provisioner "shell" {
     inline = [
+      "curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -",
       "sudo apt-get update",
-      "sudo apt-get install -y nodejs npm nginx",
+      "sudo apt-get install -y nodejs nginx",
       "sudo npm install -g n",
       "sudo n stable",
       "sudo mkdir -p /var/www/node_app",
+      "sudo chown -R ubuntu:ubuntu /var/www",
       "git clone https://github.com/LuisArana631/packer-devops-tools-hw.git /var/www/node_app",
       "cd /var/www/node_app/nodejs-project/src && sudo npm i",
       "sudo chown -R ubuntu:ubuntu /var/www/node_app",
