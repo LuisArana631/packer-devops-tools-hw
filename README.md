@@ -190,34 +190,3 @@ packer validate .
 ```bash
 packer build .
 ```
-
-### Crear una template de Packer (Con el )
-##
-
-2. Elige la AMI de base para la región 
-
-    https://cloud-images.ubuntu.com/locator/ec2/
-
-3. Crea un archivo de configuración de Packer en formato
-
-```json
-{
-  "builders": [{
-    "type": "amazon-ebs",
-    "access_key": "TU_ACCESS_KEY",
-    "secret_key": "TU_SECRET_KEY",
-    "region": "us-east-1",
-    "source_ami": "ami-0b0ea68c435eb488d",
-    "instance_type": "t2.micro",
-    "ssh_username": "ubuntu",
-    "ami_name": "packer-nodejs-nginx {{timestamp}}"
-  }],
-  "provisioners": [{
-    "type": "shell",
-    "inline": [
-      "sudo apt-get update",
-      "sudo apt-get install -y nodejs npm nginx"
-    ]
-  }]
-}
-```
